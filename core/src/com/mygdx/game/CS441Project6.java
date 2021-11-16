@@ -207,7 +207,7 @@ public class CS441Project6 extends ApplicationAdapter {
 		}
 
 
-		if(ballCircle.x > h || ballCircle.x < 0) {
+		if(ballCircle.x > h + 650 || ballCircle.x < 0) {
 			ballDx = -ballDx;
 		}
 		if((ballCircle.y > w)){
@@ -225,13 +225,13 @@ public class CS441Project6 extends ApplicationAdapter {
 		ballCircle.y += ballDy;
 
 		if(Intersector.overlaps(ballCircle, rectP1)){
-			ballDx = dy + 20;
+			ballDx = -50;
 			ballDy = dx + 25;
 
 		}
 
 		if(Intersector.overlaps(ballCircle, rectP2)){
-			ballDx = dx2 + 20;
+			ballDx = 50;
 			ballDy = dy2 + 25;
 
 		}
